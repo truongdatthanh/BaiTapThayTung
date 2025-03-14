@@ -56,7 +56,7 @@ router.put('/:id', async function(req, res, next) {
         let updatedCategory =  await categorySchema.findByIdAndUpdate(req.params.id,updatedObj,{new:true})
         res.status(200).send({
             success:true,
-            data:updatedProduct
+            data:updatedCategory
         });
     } catch (error) {
         res.status(404).send({
